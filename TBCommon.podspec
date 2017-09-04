@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "TBBaseApp"
-  s.version      = "0.0.8"
+  s.name         = "TBCommon"
+  s.version      = "0.0.1"
   s.summary      = "1"
 
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = '3232332'
 
-  s.homepage     = "https://github.com/james1896/TBBaseApp"
+  s.homepage     = "https://github.com/james1896/TBCommon"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/james1896/TBBaseApp.git", :tag => s.version, :submodules => true }
+  s.source       = { :git => "https://github.com/james1896/TBCommon.git", :tag => s.version, :submodules => true }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,62 +88,74 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  s.source_files  = "TBBase.h"
-  s.exclude_files = "Classes/Exclude"
-  s.dependency "AFNetworking", "~> 3.1"
-  
-   s.subspec 'RSA' do |ss|
-    ss.source_files = 'Base/RSA/*.{h,m}'
-#     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
-#     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.osx.frameworks = 'CoreServices'
-  end
-
-  s.subspec 'TBStartMovieController' do |ss|
-    ss.source_files = 'Base/StartMovieController/*.{h,m,gif,mp4}'
-#     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
-#     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.osx.frameworks = 'CoreServices'
-  end
-  
-  s.subspec 'TBKeyChain' do |ss|
-    ss.source_files = 'Base/TBKeyChain/*.{h,m}'
+      s.subspec 'TBCommon' do |ss|
+      ss.source_files = 'common/*.{h,m}'
    
 #     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
 #     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
 #     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
 #     ss.osx.frameworks = 'CoreServices'
   end
+#     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+#     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+#     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+#     ss.osx.frameworks = 'CoreServices'
+    end
+#   s.source_files  = "TBBase.h"
+#   s.exclude_files = "Classes/Exclude"
+#   s.dependency "AFNetworking", "~> 3.1"
   
-  s.subspec 'TBView' do |ss|
-    ss.source_files = 'Base/TBView/*.{h,m}'
-  end
+#    s.subspec 'RSA' do |ss|
+#     ss.source_files = 'Base/RSA/*.{h,m}'
+# #     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+# #     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.osx.frameworks = 'CoreServices'
+#   end
+
+#   s.subspec 'TBStartMovieController' do |ss|
+#     ss.source_files = 'Base/StartMovieController/*.{h,m,gif,mp4}'
+# #     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+# #     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.osx.frameworks = 'CoreServices'
+#   end
   
-  
-  
-  s.subspec 'TBPredicate' do |ss|
-    ss.source_files = 'Base/TBPredicate/*.{h,m}'
-  end
-  
-    s.subspec 'CommonUtils' do |ss|
-    ss.source_files = 'Base/CommonUtils/*.{h,m}'
+#   s.subspec 'TBKeyChain' do |ss|
+#     ss.source_files = 'Base/TBKeyChain/*.{h,m}'
    
-#     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
-#     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.osx.frameworks = 'CoreServices'
-  end 
+# #     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+# #     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.osx.frameworks = 'CoreServices'
+#   end
   
-   s.subspec 'TBRequestManager' do |ss|
-    ss.source_files = 'Base/TBRequestManager/*.{h,m}'
-#     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
-#     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#     ss.osx.frameworks = 'CoreServices'
-  end
+#   s.subspec 'TBView' do |ss|
+#     ss.source_files = 'Base/TBView/*.{h,m}'
+#   end
+  
+  
+  
+#   s.subspec 'TBPredicate' do |ss|
+#     ss.source_files = 'Base/TBPredicate/*.{h,m}'
+#   end
+  
+#     s.subspec 'CommonUtils' do |ss|
+#     ss.source_files = 'Base/CommonUtils/*.{h,m}'
+   
+# #     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+# #     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.osx.frameworks = 'CoreServices'
+#   end 
+  
+#    s.subspec 'TBRequestManager' do |ss|
+#     ss.source_files = 'Base/TBRequestManager/*.{h,m}'
+# #     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+# #     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+# #     ss.osx.frameworks = 'CoreServices'
+#   end
   # s.public_header_files = "Classes/**/*.h"
 
 
