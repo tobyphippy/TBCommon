@@ -10,6 +10,14 @@
 
 @interface TBCommon : NSObject
 
+//获得ip地址
++ (NSString *)getIPAddress:(BOOL)preferIPv4;
+//获得uuid
++ (NSString *)getUUID;
+
+//获得设备型号
++ (NSString *)getDeviceModel;
+
 /**
  比较两个版本号的大小
  
