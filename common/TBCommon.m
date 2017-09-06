@@ -76,7 +76,7 @@
 }
 
 //获取所有相关IP信息
-+ (NSDictionary *)getIPAddresses
++ (NSString *)getIPAddresses
 {
     NSMutableDictionary *addresses = [NSMutableDictionary dictionaryWithCapacity:8];
     
@@ -113,7 +113,8 @@
         // Free memory
         freeifaddrs(interfaces);
     }
-    return [addresses count] ? addresses : nil;
+    NSLog(@"getIPAddresses:%@",addresses);
+    return [addresses count] ? addresses[@"en1/ipv4"] : nil;
 }
 
 
